@@ -1,0 +1,40 @@
+.ground {
+  height: 450px;
+  width: 100%;
+  position: relative;
+  border-bottom: 5px solid green;
+}
+.ball {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: url(./image/ball.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  position: absolute;
+}
+.ball {
+  animation:
+  drop-bottom 3s forwards,
+  drop-right 3s forwards,
+  rotation 0.6s 4 linear;
+}
+@keyframes drop-bottom {
+  0% {bottom: 100%;animation-timing-function: ease-in; box-shadow: 0 0 0px rgb(255, 255, 255);}
+  20% {bottom: 0%; width: 160px; height: 120px; animation-timing-function: ease-out; box-shadow: 0 100px 100px rgba(0,0,0,1);}
+  40% {bottom: 70%; width: 150px; height: 150px;animation-timing-function: ease-in; box-shadow: 0 0 5px rgba(146, 144, 144, 0.5);}
+  60% {bottom: 0%; width: 160px; height: 130px;animation-timing-function: ease-out; box-shadow: 0 100px 100px rgba(0, 0, 0, 1);}
+  80% {bottom: 50%; width: 150px; height: 150px;animation-timing-function: ease-in; box-shadow: 0 0 5px rgba(0,0,0,0.7);}
+  90% {bottom: 0%; width: 160px; height: 130px; box-shadow: 0 100px 100px rgba(0,0,0,1);}
+  100% {bottom: 0%; width: 150px; height: 150px; box-shadow: 0 100px 100px rgba(0,0,0,1);}
+}
+@keyframes drop-right {
+  0% {left: 0;}
+  100% {left: 90%;}
+}
+@keyframes rotation {
+  0% {rotate: 0;}
+  100% {rotate: 360deg;}
+}
